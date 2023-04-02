@@ -77,7 +77,7 @@ function wpex_auto_add_link_titles( $content ) {
 			if ( $link && $text ) {
 				$text    = sanitize_text_field( $text ); // Sanitize
 				$text    = ucwords( $text );  // Captilize words (looks better imo)
-				$replace = $link .'" title="'. $text .'"'; // Add title to link
+				$replace = $link .'" title="'. esc_attr( $text ) .'"'; // Add title to link
 				$content = str_replace( $link .'"', $replace, $content ); // Replace post content
 			}
 
