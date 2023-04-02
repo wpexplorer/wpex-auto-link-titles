@@ -15,11 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'WPEX_PLUGIN_VERSION', '1.2.0' );
 define( 'WPEX_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 
-// Auto updates
-if ( is_admin() ) {
-	include_once( dirname( __FILE__ ) . '/updates.php' );
-}
-
 // This is the main plugin function - does everything.
 function wpex_auto_add_link_titles( $content ) {
 
